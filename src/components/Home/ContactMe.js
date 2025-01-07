@@ -17,13 +17,13 @@ const ContactMe = () => {
     e.preventDefault();
     setIsLoading(true);
     setEmailError(false);
-
+        
     emailjs
       .sendForm(
-        "service_7st8pbj",
-        "template_63i9e4h",
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        "offOxd6LjCh6-Ctmj"
+        process.env.REACT_APP_EMAILJS_USER_ID
       )
       .then(
         (result) => {
@@ -106,7 +106,7 @@ const ContactMe = () => {
               <Box display="flex" alignItems="center" gap={1}>
                 <Phone sx={{ color: "#6bb08b" }} />
                 <Typography variant="body2" color="textPrimary">
-                +43 677 62349079 
+                 +43 677 62349079 
                 </Typography>
               </Box>
               <Box display="flex" alignItems="center" gap={1}>
@@ -238,7 +238,7 @@ const ContactMe = () => {
                   }}
                 >
                 <Typography variant="H24px" color="white">
-                  Email successfully sent!
+                  Your message successfully sent!
                 </Typography>
               </Card>
               )}
