@@ -1,4 +1,4 @@
-Deployed Version? https://eliftoraman.vercel.app/
+Deployed Version: https://eliftoraman.vercel.app/
 
 # Getting Started with Create React App
 
